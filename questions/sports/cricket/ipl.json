@@ -1,0 +1,2003 @@
+{
+  "module": {
+    "id": "sports-cricket-ipl",
+    "name": "IPL",
+    "category": "sports",
+    "subcategory": "cricket",
+    "icon": "🏏",
+    "difficulty": "medium",
+    "version": "2.0",
+    "last_updated": "2026-05-30",
+    "total_questions": 100,
+    "questions_per_game": 20,
+    "note": "Verified by host. Updatable questions flagged."
+  },
+  "questions": [
+    {
+      "id": "ipl-001",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "In which year was the Indian Premier League founded?",
+      "opts": [
+        "2006",
+        "2007",
+        "2008",
+        "2009"
+      ],
+      "ans": 2,
+      "fact": "The IPL was founded by the BCCI in 2007 and the first season was played in 2008.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-002",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Who is known as the Father of IPL?",
+      "opts": [
+        "N. Srinivasan",
+        "Lalit Modi",
+        "Sourav Ganguly",
+        "Rajiv Shukla"
+      ],
+      "ans": 1,
+      "fact": "Lalit Modi conceptualised and launched the IPL in 2008 as BCCI Vice President.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-003",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team won the very first IPL title in 2008?",
+      "opts": [
+        "Chennai Super Kings",
+        "Mumbai Indians",
+        "Rajasthan Royals",
+        "Delhi Daredevils"
+      ],
+      "ans": 2,
+      "fact": "Rajasthan Royals, led by Shane Warne, won the inaugural IPL in 2008.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-004",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "How many overs are bowled per side in an IPL match?",
+      "opts": [
+        "15",
+        "20",
+        "25",
+        "50"
+      ],
+      "ans": 1,
+      "fact": "IPL follows the T20 format — each team bats for a maximum of 20 overs.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-005",
+      "type": "mcq",
+      "difficulty": "easy",
+      "hook": "🏆 First 10 years of IPL!",
+      "q": "Which team won the most IPL titles in the first 10 years of IPL?",
+      "opts": [
+        "Chennai Super Kings",
+        "Mumbai Indians",
+        "Kolkata Knight Riders",
+        "Royal Challengers Bengaluru"
+      ],
+      "ans": 1,
+      "fact": "Mumbai Indians won the IPL 3 times from 2008 to 2017. CSK and KKR won it 2 times each till then.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "ipl-006",
+      "type": "mcq",
+      "difficulty": "easy",
+      "hook": "👑 The captain of captains!",
+      "q": "Which player has won the most IPL matches as captain?",
+      "opts": [
+        "Rohit Sharma",
+        "MS Dhoni",
+        "Virat Kohli",
+        "Gautam Gambhir"
+      ],
+      "ans": 1,
+      "fact": "MS Dhoni has captained 235 matches for CSK in IPL and won 136 of them.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "ipl-007",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "What does IPL stand for?",
+      "opts": [
+        "India Premier League",
+        "Indian Premier League",
+        "International Premier League",
+        "Indian Professional League"
+      ],
+      "ans": 1,
+      "fact": "IPL stands for Indian Premier League, organised by the BCCI.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-008",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which iconic stadium in Mumbai is the home ground of Mumbai Indians?",
+      "opts": [
+        "Eden Gardens",
+        "Wankhede Stadium",
+        "Brabourne Stadium",
+        "DY Patil Stadium"
+      ],
+      "ans": 1,
+      "fact": "Wankhede Stadium in Mumbai is the home of Mumbai Indians with a capacity of around 33,000.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-009",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team is nicknamed Yellow Army?",
+      "opts": [
+        "Mumbai Indians",
+        "Chennai Super Kings",
+        "Sunrisers Hyderabad",
+        "Gujarat Titans"
+      ],
+      "ans": 1,
+      "fact": "Chennai Super Kings are known as the Yellow Army due to their iconic yellow jersey.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-010",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team is known by the nickname MI?",
+      "opts": [
+        "Mumbai Indians",
+        "Mysore Indians",
+        "Maharashtra Indians",
+        "Multan Indians"
+      ],
+      "ans": 0,
+      "fact": "MI is the universally recognised short form for Mumbai Indians.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-011",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Who captained Rajasthan Royals to their 2008 IPL title?",
+      "opts": [
+        "Rahul Dravid",
+        "Shane Warne",
+        "Yusuf Pathan",
+        "Graeme Smith"
+      ],
+      "ans": 1,
+      "fact": "Shane Warne led Rajasthan Royals to a surprise title in the inaugural IPL season of 2008.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-012",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team won the IPL in 2024?",
+      "opts": [
+        "Chennai Super Kings",
+        "Mumbai Indians",
+        "Kolkata Knight Riders",
+        "Sunrisers Hyderabad"
+      ],
+      "ans": 2,
+      "fact": "Kolkata Knight Riders won their third IPL title in 2024, beating Sunrisers Hyderabad in the final.",
+      "outdatable": true,
+      "review_after": "2025-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-013",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "The Eden Gardens stadium is the home of which IPL team?",
+      "opts": [
+        "Mumbai Indians",
+        "Delhi Capitals",
+        "Kolkata Knight Riders",
+        "Punjab Kings"
+      ],
+      "ans": 2,
+      "fact": "Eden Gardens in Kolkata is the home of Kolkata Knight Riders and one of cricket's iconic venues.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-014",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team won the IPL in 2023?",
+      "opts": [
+        "Gujarat Titans",
+        "Mumbai Indians",
+        "Chennai Super Kings",
+        "Rajasthan Royals"
+      ],
+      "ans": 2,
+      "fact": "Chennai Super Kings won their fifth IPL title in 2023, beating Gujarat Titans in the final.",
+      "outdatable": true,
+      "review_after": "2024-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-015",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "How many teams currently play in the IPL from 2022?",
+      "opts": [
+        "8",
+        "9",
+        "10",
+        "12"
+      ],
+      "ans": 2,
+      "fact": "The IPL expanded to 10 teams in 2022 with the addition of Gujarat Titans and Lucknow Super Giants.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-016",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team did MS Dhoni lead to multiple IPL titles?",
+      "opts": [
+        "Mumbai Indians",
+        "Kolkata Knight Riders",
+        "Chennai Super Kings",
+        "Rajasthan Royals"
+      ],
+      "ans": 2,
+      "fact": "MS Dhoni led Chennai Super Kings to 5 IPL titles — 2010, 2011, 2018, 2021 and 2023.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-017",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which broadcaster holds the television rights for IPL in India?",
+      "opts": [
+        "Amazon Prime",
+        "Sony Sports",
+        "Star Sports",
+        "Zee Sports"
+      ],
+      "ans": 2,
+      "fact": "Star Sports holds the television broadcast rights for IPL in India.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-018",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team is known as RCB?",
+      "opts": [
+        "Rajasthan Cricket Brigade",
+        "Royal Challengers Bengaluru",
+        "Royal Champions Bangalore",
+        "Rajasthan Challengers Bangalore"
+      ],
+      "ans": 1,
+      "fact": "RCB stands for Royal Challengers Bengaluru, one of the original IPL franchises.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-019",
+      "type": "mcq",
+      "difficulty": "easy",
+      "hook": "🏆 Fresh off the press!",
+      "q": "Which team won the IPL 2025 title?",
+      "opts": [
+        "Royal Challengers Bengaluru",
+        "Punjab Kings",
+        "Mumbai Indians",
+        "Kolkata Knight Riders"
+      ],
+      "ans": 0,
+      "fact": "Royal Challengers Bengaluru won their first-ever IPL title in 2025, ending a long wait for their passionate fanbase.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-020",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team won back-to-back IPL titles in 2019 and 2020?",
+      "opts": [
+        "Chennai Super Kings",
+        "Mumbai Indians",
+        "Kolkata Knight Riders",
+        "Delhi Capitals"
+      ],
+      "ans": 1,
+      "fact": "Mumbai Indians won back-to-back titles in 2019 and 2020, their 4th and 5th IPL championships.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-021",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "👑 All-time run machine!",
+      "q": "Who is the all-time leading run scorer in IPL history?",
+      "opts": [
+        "Rohit Sharma",
+        "David Warner",
+        "Virat Kohli",
+        "Shikhar Dhawan"
+      ],
+      "ans": 2,
+      "fact": "Virat Kohli is the all-time leading run scorer in IPL history with over 9,000 runs.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "ipl-022",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🎯 Most wickets ever!",
+      "q": "Who has taken the most wickets in IPL history?",
+      "opts": [
+        "Lasith Malinga",
+        "Dwayne Bravo",
+        "Yuzvendra Chahal",
+        "Amit Mishra"
+      ],
+      "ans": 2,
+      "fact": "Yuzvendra Chahal holds the record for most wickets in IPL history with over 230 wickets.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "ipl-023",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "MS Dhoni is famously associated with which IPL team throughout his career?",
+      "opts": [
+        "Mumbai Indians",
+        "Rajasthan Royals",
+        "Chennai Super Kings",
+        "Kolkata Knight Riders"
+      ],
+      "ans": 2,
+      "fact": "MS Dhoni has been synonymous with Chennai Super Kings throughout the IPL, winning 5 titles as captain.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "ipl-024",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🤔 Think carefully!",
+      "q": "Which batsman holds the record for most sixes in a single IPL season?",
+      "opts": [
+        "Chris Gayle",
+        "Vaibhav Suryavanshi",
+        "Virat Kohli",
+        "AB de Villiers"
+      ],
+      "ans": 1,
+      "fact": "Vaibhav Suryavanshi hit 65 sixes in IPL 2026 — the most in a single IPL season.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-025",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Who scored the first century in IPL history?",
+      "opts": [
+        "Brendon McCullum",
+        "Sourav Ganguly",
+        "Adam Gilchrist",
+        "Virender Sehwag"
+      ],
+      "ans": 0,
+      "fact": "Brendon McCullum scored 158* off 73 balls for Kolkata Knight Riders in the very first IPL match in 2008.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-026",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Rohit Sharma has captained which IPL team to the most titles?",
+      "opts": [
+        "Deccan Chargers",
+        "Chennai Super Kings",
+        "Mumbai Indians",
+        "Kolkata Knight Riders"
+      ],
+      "ans": 2,
+      "fact": "Rohit Sharma captained Mumbai Indians to 5 IPL titles — 2013, 2015, 2017, 2019 and 2020.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 570
+      }
+    },
+    {
+      "id": "ipl-027",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "💥 The Universe Boss!",
+      "q": "Which player is known as Universe Boss in IPL?",
+      "opts": [
+        "MS Dhoni",
+        "Virat Kohli",
+        "Chris Gayle",
+        "AB de Villiers"
+      ],
+      "ans": 2,
+      "fact": "Chris Gayle earned the nickname Universe Boss for his explosive batting in IPL and T20 cricket globally.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-028",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "AB de Villiers played for which IPL team throughout most of his career?",
+      "opts": [
+        "Mumbai Indians",
+        "Chennai Super Kings",
+        "Royal Challengers Bengaluru",
+        "Delhi Capitals"
+      ],
+      "ans": 2,
+      "fact": "AB de Villiers represented Royal Challengers Bengaluru for most of his IPL career, forming a legendary partnership with Virat Kohli.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-029",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Who was the captain of KKR when they won their first IPL title in 2012?",
+      "opts": [
+        "Sourav Ganguly",
+        "Gautam Gambhir",
+        "Jacques Kallis",
+        "Brendon McCullum"
+      ],
+      "ans": 1,
+      "fact": "Gautam Gambhir led KKR to their first IPL title in 2012 and again in 2014.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 570
+      }
+    },
+    {
+      "id": "ipl-030",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which legendary spinner captained Rajasthan Royals to the 2008 IPL title?",
+      "opts": [
+        "Muttiah Muralitharan",
+        "Daniel Vettori",
+        "Shane Warne",
+        "Harbhajan Singh"
+      ],
+      "ans": 2,
+      "fact": "Shane Warne's tactical brilliance guided an underdog Rajasthan Royals to win the inaugural IPL.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-031",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Lasith Malinga is famous for which type of delivery in IPL?",
+      "opts": [
+        "Googly",
+        "Doosra",
+        "Yorker",
+        "Flipper"
+      ],
+      "ans": 2,
+      "fact": "Lasith Malinga is the master of toe-crushing yorkers.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-032",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "📊 Record innings!",
+      "q": "What is the highest individual score in IPL history?",
+      "opts": [
+        "158*",
+        "175*",
+        "172*",
+        "164*"
+      ],
+      "ans": 1,
+      "fact": "Chris Gayle scored 175* off 66 balls for RCB vs Pune Warriors in 2013.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-033",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🏆 Most titles as a player!",
+      "q": "Which player has won the most IPL titles overall as a player?",
+      "opts": [
+        "Rohit Sharma",
+        "MS Dhoni",
+        "Kieron Pollard",
+        "Suresh Raina"
+      ],
+      "ans": 0,
+      "fact": "Rohit Sharma has won 6 IPL titles — 5 with Mumbai Indians (2013, 2015, 2017, 2019, 2020) and 1 with Deccan Chargers (2009).",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 570
+      }
+    },
+    {
+      "id": "ipl-034",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Suresh Raina was known as Mr IPL — which team did he represent?",
+      "opts": [
+        "Mumbai Indians",
+        "Chennai Super Kings",
+        "Royal Challengers Bengaluru",
+        "Rajasthan Royals"
+      ],
+      "ans": 1,
+      "fact": "Suresh Raina was one of CSK's most consistent performers and earned the Mr IPL tag for his prolific run-scoring.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-035",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team did Virat Kohli make his IPL debut for?",
+      "opts": [
+        "Delhi Capitals",
+        "Royal Challengers Bangalore",
+        "Punjab Kings",
+        "Mumbai Indians"
+      ],
+      "ans": 1,
+      "fact": "Virat Kohli has played for Royal Challengers Bangalore since the very first IPL season in 2008.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 570
+      }
+    },
+    {
+      "id": "ipl-036",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "💛 Mr CSK!",
+      "q": "Which player has played the most matches for Chennai Super Kings?",
+      "opts": [
+        "Suresh Raina",
+        "MS Dhoni",
+        "Ravindra Jadeja",
+        "R. Ashwin"
+      ],
+      "ans": 1,
+      "fact": "MS Dhoni has played the most matches for Chennai Super Kings, with well over 250 appearances since the team's inception.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-037",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which bowler took the highest wickets in the first IPL season 2008?",
+      "opts": [
+        "Sreesanth",
+        "Lasith Malinga",
+        "Sohail Tanvir",
+        "RP Singh"
+      ],
+      "ans": 2,
+      "fact": "Sohail Tanvir was the highest wicket-taker in IPL 2008 and played a key role in Rajasthan's title win.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-038",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Who captained Delhi Capitals to their first IPL final appearance in 2020?",
+      "opts": [
+        "Gautam Gambhir",
+        "Shreyas Iyer",
+        "Rishabh Pant",
+        "Shikhar Dhawan"
+      ],
+      "ans": 1,
+      "fact": "Shreyas Iyer captained Delhi Capitals to the IPL final in 2020, where they lost to Mumbai Indians.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-039",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "😢 Emotional moment!",
+      "q": "Which player famously announced retirement from IPL just before finals during CSK's 2023 title win?",
+      "opts": [
+        "Faf du Plessis",
+        "Ravindra Jadeja",
+        "MS Dhoni",
+        "Ambati Rayudu"
+      ],
+      "ans": 3,
+      "fact": "MS Dhoni hinted his retirement mid-season in 2023 but continued playing. Ambati Rayudu actually announced his IPL retirement during the 2023 season.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-040",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Hardik Pandya captained which team to the IPL title in their debut season 2022?",
+      "opts": [
+        "Mumbai Indians",
+        "Lucknow Super Giants",
+        "Gujarat Titans",
+        "Rajasthan Royals"
+      ],
+      "ans": 2,
+      "fact": "Hardik Pandya led Gujarat Titans to the IPL title in their very first season in 2022.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-041",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "📊 Highest team score ever!",
+      "q": "What is the highest team score ever in IPL history?",
+      "opts": [
+        "263/5",
+        "277/3",
+        "287/3",
+        "270/2"
+      ],
+      "ans": 2,
+      "fact": "Sunrisers Hyderabad scored 287/3 against RCB in 2024 — the highest team total in IPL history.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-042",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which player has hit the most sixes in overall IPL history?",
+      "opts": [
+        "Rohit Sharma",
+        "MS Dhoni",
+        "Chris Gayle",
+        "AB de Villiers"
+      ],
+      "ans": 2,
+      "fact": "Chris Gayle holds the record for most sixes in IPL history with over 350 sixes.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-043",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "What is the highest individual score in a single IPL innings?",
+      "opts": [
+        "158*",
+        "175*",
+        "172*",
+        "164*"
+      ],
+      "ans": 1,
+      "fact": "Chris Gayle scored 175* off 66 balls for RCB vs Pune Warriors India in 2013.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-044",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🎯 Best bowling figures!",
+      "q": "Which bowler has the best bowling figures in a single IPL match?",
+      "opts": [
+        "Anil Kumble (5/5)",
+        "Sohail Tanvir (6/14)",
+        "Alzarri Joseph (6/12)",
+        "Dwayne Bravo (6/23)"
+      ],
+      "ans": 2,
+      "fact": "Alzarri Joseph took 6/12 on his IPL debut for Mumbai Indians against SunRisers Hyderabad in 2019.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-045",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which IPL team has the most appearances in IPL finals?",
+      "opts": [
+        "Kolkata Knight Riders",
+        "Royal Challengers Bengaluru",
+        "Chennai Super Kings",
+        "Mumbai Indians"
+      ],
+      "ans": 2,
+      "fact": "Chennai Super Kings have appeared in the most IPL finals, reflecting their consistent excellence.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "ipl-046",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "📅 The season of records!",
+      "q": "How many runs did Virat Kohli score in IPL 2016 — a single season record?",
+      "opts": [
+        "837",
+        "919",
+        "973",
+        "1045"
+      ],
+      "ans": 2,
+      "fact": "Virat Kohli scored a record 973 runs in IPL 2016 for RCB, including 4 centuries.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-047",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🏆 As of 2025!",
+      "q": "Which teams have won the most IPL titles as of 2025?",
+      "opts": [
+        "CSK with 5",
+        "MI with 5",
+        "Both MI and CSK have 5 each",
+        "KKR with 4"
+      ],
+      "ans": 2,
+      "fact": "Both Mumbai Indians and Chennai Super Kings have won the IPL 5 times each as of 2025.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-048",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "⚡ Fastest fifty!",
+      "q": "What is the fastest fifty in IPL history in terms of balls?",
+      "opts": [
+        "13 balls",
+        "12 balls",
+        "14 balls",
+        "16 balls"
+      ],
+      "ans": 0,
+      "fact": "Yashasvi Jaiswal (RR, 2023) and Urvil Patel (CSK, 2026) both scored the fastest fifty in 13 balls.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-049",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which IPL season was played entirely in the UAE due to COVID-19?",
+      "opts": [
+        "IPL 2019",
+        "IPL 2020",
+        "IPL 2021",
+        "IPL 2022"
+      ],
+      "ans": 1,
+      "fact": "IPL 2020 was held entirely in the UAE — Dubai, Abu Dhabi and Sharjah.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 520
+      }
+    },
+    {
+      "id": "ipl-050",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "👑 Century king!",
+      "q": "How many IPL centuries has Virat Kohli scored — the most by any player?",
+      "opts": [
+        "6",
+        "7",
+        "9",
+        "8"
+      ],
+      "ans": 2,
+      "fact": "Virat Kohli has scored 9 IPL centuries — the most by any batsman. Four came in 2016 alone.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-051",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which player scored four consecutive centuries in IPL 2016?",
+      "opts": [
+        "AB de Villiers",
+        "Virat Kohli",
+        "Shane Watson",
+        "Chris Gayle"
+      ],
+      "ans": 1,
+      "fact": "Virat Kohli scored 4 centuries in IPL 2016 for RCB — an unprecedented feat in T20 cricket.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-052",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "😬 Lowest ever!",
+      "q": "What is the lowest team total ever in IPL history?",
+      "opts": [
+        "49 all out",
+        "58 all out",
+        "67 all out",
+        "73 all out"
+      ],
+      "ans": 0,
+      "fact": "Royal Challengers Bengaluru were bowled out for 47 against Kolkata Knight Riders in 2017 — the lowest IPL team total.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-053",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team won IPL 2022 in their debut season?",
+      "opts": [
+        "Lucknow Super Giants",
+        "Rajasthan Royals",
+        "Gujarat Titans",
+        "Royal Challengers Bengaluru"
+      ],
+      "ans": 2,
+      "fact": "Gujarat Titans won the IPL in their debut season in 2022 under Hardik Pandya.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-054",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "📋 Most capped player!",
+      "q": "Which player has played the most matches in IPL history?",
+      "opts": [
+        "MS Dhoni",
+        "Virat Kohli",
+        "Rohit Sharma",
+        "Suresh Raina"
+      ],
+      "ans": 1,
+      "fact": "Virat Kohli has played 280+ IPL matches and is the most capped IPL player currently.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-055",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Who was the first player to score 1000 runs in a single IPL season?",
+      "opts": [
+        "Chris Gayle",
+        "David Warner",
+        "Virat Kohli",
+        "No one has scored 1000 runs in a single season"
+      ],
+      "ans": 3,
+      "fact": "No player has scored 1000 runs in a single IPL season. Virat Kohli came closest with 973 in 2016.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 600
+      }
+    },
+    {
+      "id": "ipl-056",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🔥 Winning streak!",
+      "q": "Which IPL team has the record for winning the most consecutive matches in a single season?",
+      "opts": [
+        "Mumbai Indians",
+        "Chennai Super Kings",
+        "Gujarat Titans",
+        "Kolkata Knight Riders"
+      ],
+      "ans": 3,
+      "fact": "Kolkata Knight Riders won 9 consecutive matches in IPL 2014 on their way to winning the title.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 570
+      }
+    },
+    {
+      "id": "ipl-057",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "In which year did the Deccan Chargers win the IPL title?",
+      "opts": [
+        "2008",
+        "2009",
+        "2010",
+        "2011"
+      ],
+      "ans": 1,
+      "fact": "Deccan Chargers won the IPL in 2009, with Adam Gilchrist playing a key role as captain.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-058",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "6 sixes in an over?",
+      "q": "Which Indian batsman hit 6 sixes in an over in an IPL match?",
+      "opts": [
+        "Rohit Sharma",
+        "Yuvraj Singh",
+        "Riyan Parag",
+        "No Indian batsman has hit 6 sixes in an IPL over"
+      ],
+      "ans": 3,
+      "fact": "No Indian has hit 6 sixes in one IPL over. However, Riyan Parag hit 6 consecutive sixes across different overs vs KKR in 2025.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-059",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which wicketkeeper has the most dismissals in IPL history?",
+      "opts": [
+        "Rishabh Pant",
+        "MS Dhoni",
+        "Dinesh Karthik",
+        "KL Rahul"
+      ],
+      "ans": 1,
+      "fact": "MS Dhoni has the most wicketkeeper dismissals in IPL history, reflecting his outstanding glovework.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-060",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "How many wickets did Yuzvendra Chahal take in IPL 2022 to win the Purple Cap?",
+      "opts": [
+        "23",
+        "25",
+        "27",
+        "29"
+      ],
+      "ans": 2,
+      "fact": "Yuzvendra Chahal took 27 wickets in IPL 2022 for Rajasthan Royals to win the Purple Cap.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-061",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🎬 Bollywood + Cricket!",
+      "q": "Which Bollywood actor co-owns the Kolkata Knight Riders franchise?",
+      "opts": [
+        "Salman Khan",
+        "Akshay Kumar",
+        "Shah Rukh Khan",
+        "Aamir Khan"
+      ],
+      "ans": 2,
+      "fact": "Shah Rukh Khan, along with Juhi Chawla, co-owns Kolkata Knight Riders since the IPL's founding in 2008.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-062",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which businessman owns the Chennai Super Kings franchise?",
+      "opts": [
+        "Mukesh Ambani",
+        "N. Srinivasan",
+        "Ratan Tata",
+        "Kumar Mangalam Birla"
+      ],
+      "ans": 1,
+      "fact": "N. Srinivasan, former BCCI President, owns Chennai Super Kings through his company India Cements.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-063",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "The Mumbai Indians are owned by which business family?",
+      "opts": [
+        "Tata family",
+        "Birla family",
+        "Ambani family",
+        "Adani family"
+      ],
+      "ans": 2,
+      "fact": "Mumbai Indians are owned by Reliance Industries, headed by Mukesh Ambani.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 520
+      }
+    },
+    {
+      "id": "ipl-064",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which IPL team is based in Hyderabad and wears orange jerseys?",
+      "opts": [
+        "Gujarat Titans",
+        "Rajasthan Royals",
+        "Sunrisers Hyderabad",
+        "Royal Challengers Bengaluru"
+      ],
+      "ans": 2,
+      "fact": "Sunrisers Hyderabad wear distinctive orange jerseys and play at Rajiv Gandhi International Cricket Stadium.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 570
+      }
+    },
+    {
+      "id": "ipl-065",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which two new teams were added to the IPL in 2022?",
+      "opts": [
+        "Pune Supergiants and Rising Pune Supergiant",
+        "Gujarat Titans and Lucknow Super Giants",
+        "Kochi Tuskers and Pune Warriors",
+        "Sunrisers Hyderabad and Delhi Capitals"
+      ],
+      "ans": 1,
+      "fact": "Gujarat Titans and Lucknow Super Giants were added in 2022, taking the IPL to 10 teams.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 660
+      }
+    },
+    {
+      "id": "ipl-066",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team did Kings XI Punjab rename themselves to?",
+      "opts": [
+        "Punjab Royals",
+        "Punjab Kings",
+        "Kings Punjab",
+        "Punjab Warriors"
+      ],
+      "ans": 1,
+      "fact": "Kings XI Punjab rebranded to Punjab Kings in 2021.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-067",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "What is the home ground of Royal Challengers Bengaluru?",
+      "opts": [
+        "MA Chidambaram Stadium",
+        "Wankhede Stadium",
+        "M. Chinnaswamy Stadium",
+        "Feroz Shah Kotla"
+      ],
+      "ans": 2,
+      "fact": "RCB play at M. Chinnaswamy Stadium in Bengaluru, known for its flat pitch and short boundaries.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 590
+      }
+    },
+    {
+      "id": "ipl-068",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which IPL franchise was bought for the highest price at the 2022 auction?",
+      "opts": [
+        "Mumbai Indians",
+        "Lucknow Super Giants",
+        "Gujarat Titans",
+        "Chennai Super Kings"
+      ],
+      "ans": 1,
+      "fact": "The Lucknow Super Giants franchise was sold for approximately Rs 7,090 crore at the 2022 IPL franchise auction.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 600
+      }
+    },
+    {
+      "id": "ipl-069",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Delhi Capitals were previously known by which name?",
+      "opts": [
+        "Delhi Dynamos",
+        "Delhi Daredevils",
+        "Delhi Warriors",
+        "Delhi Thunder"
+      ],
+      "ans": 1,
+      "fact": "Delhi Capitals were known as Delhi Daredevils from 2008 to 2018 before rebranding in 2019.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-070",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team has the nickname Knight Riders?",
+      "opts": [
+        "Punjab Kings",
+        "Rajasthan Royals",
+        "Kolkata Knight Riders",
+        "Lucknow Super Giants"
+      ],
+      "ans": 2,
+      "fact": "Kolkata Knight Riders, co-owned by Shah Rukh Khan, are nicknamed the Knight Riders.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 520
+      }
+    },
+    {
+      "id": "ipl-071",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "😤 The big ban!",
+      "q": "Which franchise was suspended from the IPL for two seasons 2016-2017?",
+      "opts": [
+        "Mumbai Indians",
+        "Chennai Super Kings",
+        "Rajasthan Royals",
+        "Both CSK and RR"
+      ],
+      "ans": 3,
+      "fact": "Both Chennai Super Kings and Rajasthan Royals were suspended for two seasons due to the IPL spot-fixing scandal.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 590
+      }
+    },
+    {
+      "id": "ipl-072",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team replaced Chennai Super Kings temporarily during their 2-year suspension?",
+      "opts": [
+        "Pune Warriors",
+        "Rising Pune Supergiant",
+        "Kochi Tuskers",
+        "Pune Supergiants"
+      ],
+      "ans": 1,
+      "fact": "Rising Pune Supergiant replaced Chennai Super Kings during their two-year ban in 2016 and 2017.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 590
+      }
+    },
+    {
+      "id": "ipl-073",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Sunrisers Hyderabad replaced which franchise in 2013?",
+      "opts": [
+        "Kochi Tuskers",
+        "Pune Warriors India",
+        "Deccan Chargers",
+        "Delhi Daredevils"
+      ],
+      "ans": 2,
+      "fact": "Sunrisers Hyderabad replaced the defunct Deccan Chargers franchise in 2013.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-074",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team does Bollywood actress Preity Zinta co-own?",
+      "opts": [
+        "Rajasthan Royals",
+        "Punjab Kings",
+        "Mumbai Indians",
+        "Kolkata Knight Riders"
+      ],
+      "ans": 1,
+      "fact": "Preity Zinta is a co-owner of Punjab Kings, formerly Kings XI Punjab.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-075",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "What colour jerseys does Mumbai Indians wear?",
+      "opts": [
+        "Yellow and blue",
+        "Blue and gold",
+        "Blue and white",
+        "Red and blue"
+      ],
+      "ans": 1,
+      "fact": "Mumbai Indians wear blue and gold jerseys — colours inspired by their city's identity.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-076",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which IPL team is based in the city of Jaipur?",
+      "opts": [
+        "Gujarat Titans",
+        "Lucknow Super Giants",
+        "Rajasthan Royals",
+        "Punjab Kings"
+      ],
+      "ans": 2,
+      "fact": "Rajasthan Royals are based in Jaipur and play home matches at Sawai Mansingh Stadium.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "ipl-077",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Nita Ambani is prominently associated with which IPL franchise?",
+      "opts": [
+        "Delhi Capitals",
+        "Chennai Super Kings",
+        "Mumbai Indians",
+        "Kolkata Knight Riders"
+      ],
+      "ans": 2,
+      "fact": "Nita Ambani, wife of Mukesh Ambani, is a key figure in the Mumbai Indians ownership.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-078",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "😔 Still waiting!",
+      "q": "Which franchise has never won the IPL title as of 2026?",
+      "opts": [
+        "Kolkata Knight Riders",
+        "Sunrisers Hyderabad",
+        "Punjab Kings",
+        "Rajasthan Royals"
+      ],
+      "ans": 2,
+      "fact": "Punjab Kings came very close — losing finals in 2014 and 2025 — but have never won the IPL title.",
+      "outdatable": true,
+      "review_after": "2026-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 570
+      }
+    },
+    {
+      "id": "ipl-079",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "How many times did Deccan Chargers win the IPL?",
+      "opts": [
+        "0",
+        "1",
+        "2",
+        "3"
+      ],
+      "ans": 1,
+      "fact": "Deccan Chargers won the IPL once, in 2009, before the franchise was terminated in 2012.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-080",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which franchise is owned by the RP-Sanjeev Goenka Group?",
+      "opts": [
+        "Gujarat Titans",
+        "Lucknow Super Giants",
+        "Sunrisers Hyderabad",
+        "Punjab Kings"
+      ],
+      "ans": 1,
+      "fact": "The RP-Sanjeev Goenka Group owns Lucknow Super Giants, one of the two franchises added in 2022.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-081",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "💸 Most expensive over!",
+      "q": "Which two bowlers share the record for most runs conceded in a single IPL over?",
+      "opts": [
+        "Prasanth Parameswaran",
+        "Stuart Broad",
+        "Harshal Patel",
+        "Both Prasanth Parameswaran and Harshal Patel"
+      ],
+      "ans": 3,
+      "fact": "Prasanth Parameswaran conceded 37 runs to Chris Gayle in 2011 and Harshal Patel conceded 37 runs to Ravindra Jadeja in 2021.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 620
+      }
+    },
+    {
+      "id": "ipl-082",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "🧢 First Orange Cap!",
+      "q": "Who was the first Orange Cap holder in IPL history?",
+      "opts": [
+        "Virender Sehwag",
+        "Brendon McCullum",
+        "Sachin Tendulkar",
+        "Shaun Marsh"
+      ],
+      "ans": 3,
+      "fact": "Shaun Marsh won the first Orange Cap in IPL 2008, scoring 616 runs in 11 matches.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-083",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "How many teams participated in the very first IPL season in 2008?",
+      "opts": [
+        "6",
+        "7",
+        "8",
+        "9"
+      ],
+      "ans": 2,
+      "fact": "8 teams participated in the inaugural IPL 2008 season.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 480
+      }
+    },
+    {
+      "id": "ipl-084",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "Which player won the Player of the Tournament award in IPL 2016?",
+      "opts": [
+        "AB de Villiers",
+        "Virat Kohli",
+        "David Warner",
+        "Chris Gayle"
+      ],
+      "ans": 1,
+      "fact": "Virat Kohli won the Player of the Tournament in IPL 2016 after his record-breaking 973-run season.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-085",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "🧤 Best gloves in the game!",
+      "q": "Who holds the record for most dismissals by a wicketkeeper in a single IPL season?",
+      "opts": [
+        "MS Dhoni",
+        "Rishabh Pant",
+        "KL Rahul",
+        "Jos Buttler"
+      ],
+      "ans": 3,
+      "fact": "Jos Buttler holds the record for most dismissals in a single IPL season.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-086",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "⏱️ Time out!",
+      "q": "In which IPL season was the Strategic Time Out first introduced?",
+      "opts": [
+        "2009",
+        "2010",
+        "2011",
+        "2014"
+      ],
+      "ans": 0,
+      "fact": "The Strategic Time Out was introduced in IPL 2009. Originally 7.5 minutes, it was reduced to 2.5 minutes from 2010 onwards.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 520
+      }
+    },
+    {
+      "id": "ipl-087",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "💯 Fastest hundred ever!",
+      "q": "Who scored the fastest century in IPL history?",
+      "opts": [
+        "Chris Gayle",
+        "AB de Villiers",
+        "Vaibhav Suryavanshi",
+        "David Warner"
+      ],
+      "ans": 0,
+      "fact": "Chris Gayle scored the fastest IPL century off just 30 balls for RCB against Pune Warriors in 2013.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-088",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "📋 Playoff format!",
+      "q": "In which year was the current Eliminator and Qualifier playoff format introduced in IPL?",
+      "opts": [
+        "2012",
+        "2011",
+        "2013",
+        "2014"
+      ],
+      "ans": 1,
+      "fact": "The current playoff format — Qualifier 1, Eliminator, Qualifier 2, Final — was introduced in IPL 2011.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-089",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "Murali Vijay and which other batsman famously opened for CSK in multiple IPL seasons?",
+      "opts": [
+        "Virender Sehwag",
+        "Michael Hussey",
+        "Matthew Hayden",
+        "David Warner"
+      ],
+      "ans": 1,
+      "fact": "Michael Hussey and Murali Vijay were a prolific opening pair for Chennai Super Kings in the early IPL seasons.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-090",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "🎩 Hat-trick king!",
+      "q": "Which spinner holds the all-time record for most hat-tricks in IPL history?",
+      "opts": [
+        "Imran Tahir",
+        "Amit Mishra",
+        "Yuzvendra Chahal",
+        "Samuel Badree"
+      ],
+      "ans": 1,
+      "fact": "Amit Mishra has taken the most hat-tricks in IPL history — three in total.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-091",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "💰 Big money!",
+      "q": "What was the base price of Sam Curran when he became the most expensive buy at IPL 2023 auction?",
+      "opts": [
+        "Rs 2 crore",
+        "Rs 3 crore",
+        "Rs 1 crore",
+        "Rs 5 crore"
+      ],
+      "ans": 0,
+      "fact": "Sam Curran was sold for Rs 18.5 crore at IPL 2023 auction — the most expensive player at that auction.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 600
+      }
+    },
+    {
+      "id": "ipl-092",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "Who was the first player to win 4 IPL titles with the same franchise?",
+      "opts": [
+        "MS Dhoni with CSK",
+        "Rohit Sharma with MI",
+        "Sachin Tendulkar with MI",
+        "Kieron Pollard with MI"
+      ],
+      "ans": 1,
+      "fact": "Rohit Sharma was the first player to win 4 IPL titles with the same franchise and went on to win a 5th.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 600
+      }
+    },
+    {
+      "id": "ipl-093",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "The DRS Decision Review System was introduced in IPL in which year?",
+      "opts": [
+        "2016",
+        "2018",
+        "2019",
+        "2022"
+      ],
+      "ans": 1,
+      "fact": "DRS was introduced in IPL in 2018, allowing teams to challenge on-field umpiring decisions.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 520
+      }
+    },
+    {
+      "id": "ipl-094",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "Which IPL team did MS Dhoni lead to the 2010 Champions League T20 title?",
+      "opts": [
+        "Mumbai Indians",
+        "Chennai Super Kings",
+        "Kolkata Knight Riders",
+        "Delhi Daredevils"
+      ],
+      "ans": 1,
+      "fact": "MS Dhoni led Chennai Super Kings to win the Champions League T20 in 2010 and again in 2014.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    },
+    {
+      "id": "ipl-095",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "😯 Last ball drama!",
+      "q": "How did Mumbai Indians win the 2019 IPL final against CSK?",
+      "opts": [
+        "Rohit Sharma hit a six",
+        "Kieron Pollard hit the winning run",
+        "Lasith Malinga took the last wicket",
+        "MI batted first and won by 1 run"
+      ],
+      "ans": 3,
+      "fact": "Mumbai batted first and won by just 1 run. Lasith Malinga bowled an off-cutter that trapped Shardul Thakur LBW off the last ball.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 620
+      }
+    },
+    {
+      "id": "ipl-096",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "🎩 First ever hat-trick!",
+      "q": "Which bowler took the first hat-trick in IPL history?",
+      "opts": [
+        "Lakshmipathy Balaji",
+        "Amit Mishra",
+        "Pragyan Ojha",
+        "Lasith Malinga"
+      ],
+      "ans": 0,
+      "fact": "Lakshmipathy Balaji achieved this on May 10, 2008, playing for Chennai Super Kings against Kings XI Punjab.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 580
+      }
+    },
+    {
+      "id": "ipl-097",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "🏏 Mankad controversy!",
+      "q": "The Mankading controversy became big in which IPL season?",
+      "opts": [
+        "2017",
+        "2019",
+        "2018",
+        "2020"
+      ],
+      "ans": 1,
+      "fact": "Ravichandran Ashwin ran out Jos Buttler by Mankading in IPL 2019 (KXIP vs RR), sparking a huge debate.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 520
+      }
+    },
+    {
+      "id": "ipl-098",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "Which player was the most expensive buy at the IPL 2022 mega auction?",
+      "opts": [
+        "Virat Kohli",
+        "Rohit Sharma",
+        "Ishan Kishan",
+        "KL Rahul"
+      ],
+      "ans": 2,
+      "fact": "Ishan Kishan was bought by Mumbai Indians for Rs 15.25 crore at the IPL 2022 mega auction.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-099",
+      "type": "mcq",
+      "difficulty": "hard",
+      "q": "Which country does IPL star Pat Cummins represent internationally?",
+      "opts": [
+        "South Africa",
+        "New Zealand",
+        "England",
+        "Australia"
+      ],
+      "ans": 3,
+      "fact": "Pat Cummins is Australia's Test and ODI captain and has played for KKR, Delhi Daredevils and SRH in the IPL.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 540
+      }
+    },
+    {
+      "id": "ipl-100",
+      "type": "mcq",
+      "difficulty": "hard",
+      "hook": "🏆 Last question — go for it!",
+      "q": "Which Indian player has scored 150+ runs in an IPL innings?",
+      "opts": [
+        "KL Rahul",
+        "Abhishek Sharma",
+        "Rohit Sharma",
+        "Virat Kohli"
+      ],
+      "ans": 0,
+      "fact": "KL Rahul joins Chris Gayle and Brendon McCullum as the third player to score 150 plus in IPL history.",
+      "outdatable": true,
+      "review_after": "2027-06-01",
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 560
+      }
+    }
+  ]
+}
