@@ -1,0 +1,222 @@
+{
+  "platform": {
+    "name": "Are You Smart?",
+    "version": "1.0.0",
+    "last_updated": "2026-05-30",
+    "tagline": "Test your brain daily"
+  },
+  "categories": [
+    {
+      "id": "sports",
+      "name": "Sports",
+      "icon": "🏆",
+      "status": "live",
+      "subcategories": [
+        {
+          "id": "football",
+          "name": "Football",
+          "icon": "⚽",
+          "status": "live",
+          "description": "World Cup, Club Football, Legends & more",
+          "modules": [
+            {
+              "id": "sports-football-worldcup",
+              "name": "FIFA World Cup",
+              "icon": "🌍",
+              "file": "questions/sports/football/worldcup.json",
+              "status": "live",
+              "difficulty": "easy",
+              "question_count": 100,
+              "questions_per_game": 20,
+              "sub": "The biggest stage on Earth"
+            },
+            {
+              "id": "sports-football-legends",
+              "name": "Football Legends",
+              "icon": "🐐",
+              "file": "questions/sports/football/legends.json",
+              "status": "live",
+              "difficulty": "medium",
+              "question_count": 40,
+              "questions_per_game": 20,
+              "sub": "Messi, Ronaldo & the Greats"
+            },
+            {
+              "id": "sports-football-clubs",
+              "name": "Club Football",
+              "icon": "🏆",
+              "file": "questions/sports/football/clubs.json",
+              "status": "live",
+              "difficulty": "medium",
+              "question_count": 20,
+              "questions_per_game": 20,
+              "sub": "Champions League & Club Glory"
+            },
+            {
+              "id": "sports-football-guess",
+              "name": "Guess the Legend",
+              "icon": "🌟",
+              "file": "questions/sports/football/guess.json",
+              "status": "live",
+              "difficulty": "hard",
+              "question_count": 20,
+              "questions_per_game": 20,
+              "sub": "Who Am I? — Blur Reveal"
+            },
+            {
+              "id": "sports-football-international",
+              "name": "International Football",
+              "icon": "🌐",
+              "file": "questions/sports/football/international.json",
+              "status": "coming_soon",
+              "difficulty": "medium",
+              "question_count": 0,
+              "questions_per_game": 20,
+              "sub": "Nations, Euros & Copa América"
+            }
+          ]
+        },
+        {
+          "id": "cricket",
+          "name": "Cricket",
+          "icon": "🏏",
+          "status": "live",
+          "description": "IPL, International Cricket & Domestic Leagues",
+          "modules": [
+            {
+              "id": "sports-cricket-ipl",
+              "name": "IPL",
+              "icon": "🏏",
+              "file": "questions/sports/cricket/ipl.json",
+              "status": "live",
+              "difficulty": "medium",
+              "question_count": 100,
+              "questions_per_game": 20,
+              "sub": "Indian Premier League"
+            },
+            {
+              "id": "sports-cricket-international",
+              "name": "International Cricket",
+              "icon": "🌍",
+              "file": "questions/sports/cricket/international.json",
+              "status": "coming_soon",
+              "difficulty": "medium",
+              "question_count": 0,
+              "questions_per_game": 20,
+              "sub": "Tests, ODIs & T20 World Cup"
+            },
+            {
+              "id": "sports-cricket-domestic",
+              "name": "Domestic Leagues",
+              "icon": "🏟️",
+              "file": "questions/sports/cricket/domestic.json",
+              "status": "coming_soon",
+              "difficulty": "hard",
+              "question_count": 0,
+              "questions_per_game": 20,
+              "sub": "BBL, CPL, PSL & more"
+            }
+          ]
+        },
+        {
+          "id": "olympics",
+          "name": "Olympics",
+          "icon": "🥇",
+          "status": "coming_soon",
+          "description": "Summer, Winter & Paralympic Games",
+          "modules": []
+        },
+        {
+          "id": "other-sports",
+          "name": "Other Sports",
+          "icon": "🎯",
+          "status": "coming_soon",
+          "description": "Tennis, Basketball, F1 & more",
+          "modules": []
+        }
+      ]
+    },
+    {
+      "id": "movies",
+      "name": "Movies",
+      "icon": "🎬",
+      "status": "coming_soon",
+      "subcategories": [
+        {
+          "id": "hollywood",
+          "name": "Hollywood",
+          "icon": "🎥",
+          "status": "coming_soon",
+          "description": "Blockbusters, classics & Oscars",
+          "modules": []
+        },
+        {
+          "id": "bollywood",
+          "name": "Bollywood",
+          "icon": "🎭",
+          "status": "coming_soon",
+          "description": "Hindi cinema across eras",
+          "modules": []
+        },
+        {
+          "id": "regional",
+          "name": "Regional Indian Cinema",
+          "icon": "🎞️",
+          "status": "coming_soon",
+          "description": "Tamil, Telugu, Malayalam & more",
+          "modules": []
+        },
+        {
+          "id": "world-cinema",
+          "name": "World Cinema",
+          "icon": "🌍",
+          "status": "coming_soon",
+          "description": "Korean, Japanese, European & beyond",
+          "modules": []
+        }
+      ]
+    },
+    {
+      "id": "gk",
+      "name": "General Knowledge",
+      "icon": "📚",
+      "status": "coming_soon",
+      "subcategories": []
+    },
+    {
+      "id": "geography",
+      "name": "Geography",
+      "icon": "🌍",
+      "status": "coming_soon",
+      "subcategories": []
+    },
+    {
+      "id": "science",
+      "name": "Science",
+      "icon": "🔬",
+      "status": "coming_soon",
+      "subcategories": []
+    },
+    {
+      "id": "mythology",
+      "name": "Mythology",
+      "icon": "⚡",
+      "status": "coming_soon",
+      "subcategories": []
+    },
+    {
+      "id": "logic",
+      "name": "Logic & Maths",
+      "icon": "🧠",
+      "status": "coming_soon",
+      "subcategories": []
+    },
+    {
+      "id": "literature",
+      "name": "Literature",
+      "icon": "📖",
+      "status": "coming_soon",
+      "subcategories": []
+    }
+  ]
+}

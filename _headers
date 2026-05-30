@@ -1,0 +1,9 @@
+/*.json
+  Cache-Control: public, max-age=3600, must-revalidate
+  Content-Type: application/json
+
+/*.html
+  Cache-Control: public, max-age=300
+
+/
+  Cache-Control: public, max-age=300

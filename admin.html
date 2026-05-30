@@ -1,0 +1,879 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AYS Admin — Question Bank Manager</title>
+<style>
+:root{--bg:#07080f;--surface:#0e1018;--card:#13151f;--border:#1e2133;
+  --gold:#f5c842;--cyan:#00d4ff;--green:#00e676;--red:#ff3d57;
+  --orange:#ff7043;--text:#f0f0f5;--sub:#7a7d94;}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{background:var(--bg);color:var(--text);font-family:'DM Sans',Arial,sans-serif;
+  min-height:100vh;font-size:14px;}
+a{color:var(--cyan);}
+
+/* LOGIN */
+#loginScreen{display:flex;align-items:center;justify-content:center;
+  min-height:100vh;flex-direction:column;gap:16px;}
+.login-box{background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:32px;width:100%;max-width:360px;text-align:center;}
+.login-box h2{font-size:22px;color:var(--gold);margin-bottom:6px;}
+.login-box p{color:var(--sub);font-size:12px;margin-bottom:20px;}
+.pw-input{width:100%;background:var(--surface);border:1px solid var(--border);
+  border-radius:8px;padding:11px 14px;color:var(--text);font-size:14px;
+  font-family:Arial;outline:none;margin-bottom:12px;}
+.pw-input:focus{border-color:var(--gold);}
+.login-btn-main{width:100%;background:var(--gold);border:none;border-radius:8px;
+  padding:12px;font-size:15px;font-weight:700;cursor:pointer;color:#000;}
+
+/* MAIN */
+#mainApp{display:none;}
+.topbar{background:var(--surface);border-bottom:1px solid var(--border);
+  padding:14px 24px;display:flex;align-items:center;justify-content:space-between;
+  position:sticky;top:0;z-index:100;}
+.topbar-brand{font-size:18px;font-weight:700;color:var(--gold);}
+.topbar-brand span{color:var(--cyan);}
+.topbar-right{display:flex;gap:10px;align-items:center;}
+.tbtn{background:var(--card);border:1px solid var(--border);border-radius:7px;
+  padding:7px 13px;color:var(--text);font-size:12px;cursor:pointer;
+  font-family:Arial;transition:all .2s;}
+.tbtn:hover{border-color:var(--gold);color:var(--gold);}
+.tbtn.primary{background:var(--gold);color:#000;border-color:var(--gold);}
+
+.layout{display:flex;min-height:calc(100vh - 53px);}
+
+/* SIDEBAR */
+.sidebar{width:260px;background:var(--surface);border-right:1px solid var(--border);
+  padding:16px;flex-shrink:0;overflow-y:auto;}
+.sb-section{font-size:10px;letter-spacing:2px;text-transform:uppercase;
+  color:var(--sub);margin-bottom:8px;margin-top:16px;}
+.sb-section:first-child{margin-top:0;}
+.sb-item{display:flex;align-items:center;justify-content:space-between;
+  padding:8px 10px;border-radius:7px;cursor:pointer;transition:all .15s;
+  font-size:13px;border:1px solid transparent;}
+.sb-item:hover{background:var(--card);border-color:var(--border);}
+.sb-item.active{background:rgba(245,200,66,.1);border-color:rgba(245,200,66,.3);
+  color:var(--gold);}
+.sb-count{font-size:10px;color:var(--sub);background:var(--card);
+  border:1px solid var(--border);padding:2px 6px;border-radius:4px;}
+.sb-item.active .sb-count{color:var(--gold);}
+.sb-flag{font-size:10px;color:var(--orange);background:rgba(255,112,67,.1);
+  border:1px solid rgba(255,112,67,.3);padding:2px 6px;border-radius:4px;}
+
+/* MAIN CONTENT */
+.content{flex:1;padding:24px;overflow-y:auto;}
+.page{display:none;}
+.page.active{display:block;}
+
+/* STATS BAR */
+.stats-bar{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));
+  gap:12px;margin-bottom:24px;}
+.stat-card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:16px;text-align:center;}
+.stat-num{font-size:28px;font-weight:700;color:var(--gold);line-height:1;}
+.stat-lbl{font-size:11px;color:var(--sub);margin-top:4px;text-transform:uppercase;
+  letter-spacing:1px;}
+
+/* TABLE */
+.q-table{width:100%;border-collapse:collapse;}
+.q-table th{background:var(--surface);padding:10px 12px;text-align:left;
+  font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--sub);
+  border-bottom:1px solid var(--border);position:sticky;top:0;}
+.q-table td{padding:10px 12px;border-bottom:1px solid rgba(30,33,51,.5);
+  vertical-align:middle;font-size:13px;}
+.q-table tr:hover td{background:rgba(245,200,66,.03);}
+.q-table tr.outdatable td{border-left:3px solid var(--orange);}
+.q-table tr.outdatable-due td{border-left:3px solid var(--red);}
+
+.badge{display:inline-block;font-size:9px;font-weight:700;letter-spacing:1px;
+  padding:2px 7px;border-radius:4px;text-transform:uppercase;}
+.badge-easy{background:rgba(0,230,118,.13);color:var(--green);}
+.badge-med{background:rgba(255,112,67,.13);color:var(--orange);}
+.badge-hard{background:rgba(255,61,87,.13);color:var(--red);}
+.badge-out{background:rgba(255,112,67,.13);color:var(--orange);}
+.badge-due{background:rgba(255,61,87,.13);color:var(--red);}
+
+.q-text-cell{max-width:320px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.correct-opt{color:var(--green);font-weight:700;}
+.action-btns{display:flex;gap:6px;}
+.abtn{background:var(--surface);border:1px solid var(--border);border-radius:5px;
+  padding:4px 9px;font-size:11px;cursor:pointer;color:var(--sub);font-family:Arial;
+  transition:all .15s;}
+.abtn:hover{border-color:var(--cyan);color:var(--cyan);}
+.abtn.del:hover{border-color:var(--red);color:var(--red);}
+
+/* FORM */
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;
+  max-width:800px;margin-bottom:20px;}
+.form-full{grid-column:1/-1;}
+.form-group{display:flex;flex-direction:column;gap:6px;}
+.form-label{font-size:11px;color:var(--sub);letter-spacing:1px;text-transform:uppercase;}
+.form-input,.form-select,.form-textarea{background:var(--surface);
+  border:1px solid var(--border);border-radius:7px;padding:9px 12px;
+  color:var(--text);font-size:13px;font-family:Arial;outline:none;transition:border .2s;}
+.form-input:focus,.form-select:focus,.form-textarea:focus{border-color:var(--gold);}
+.form-select option{background:var(--card);}
+.form-textarea{resize:vertical;min-height:70px;}
+.form-hint{font-size:10px;color:var(--sub);margin-top:2px;}
+.opt-row{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+.opt-correct{border-color:var(--green) !important;}
+
+.form-submit{background:var(--gold);border:none;border-radius:8px;padding:11px 24px;
+  font-size:14px;font-weight:700;cursor:pointer;color:#000;margin-top:8px;}
+.form-cancel{background:var(--card);border:1px solid var(--border);border-radius:8px;
+  padding:11px 24px;font-size:14px;cursor:pointer;color:var(--text);
+  margin-top:8px;margin-left:10px;}
+
+/* JSON PREVIEW */
+.json-preview{background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:16px;font-family:monospace;font-size:11px;
+  color:#a8d8a8;max-height:400px;overflow-y:auto;white-space:pre-wrap;
+  word-break:break-all;}
+
+/* SEARCH */
+.search-bar{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap;}
+.search-input{background:var(--surface);border:1px solid var(--border);
+  border-radius:7px;padding:8px 14px;color:var(--text);font-size:13px;
+  font-family:Arial;outline:none;flex:1;min-width:200px;}
+.search-input:focus{border-color:var(--gold);}
+
+.section-title{font-size:18px;font-weight:700;margin-bottom:4px;}
+.section-sub{font-size:12px;color:var(--sub);margin-bottom:20px;}
+
+/* OUTDATABLE LIST */
+.out-card{background:var(--card);border:1px solid var(--border);border-radius:10px;
+  padding:16px;margin-bottom:12px;}
+.out-card.due{border-color:rgba(255,61,87,.4);background:rgba(255,61,87,.04);}
+.out-card-top{display:flex;align-items:flex-start;justify-content:space-between;
+  margin-bottom:8px;}
+.out-q{font-weight:700;font-size:13px;line-height:1.4;}
+.out-meta{font-size:11px;color:var(--sub);margin-top:4px;}
+.out-due{font-size:11px;color:var(--red);font-weight:700;}
+
+.modal-overlay{position:fixed;inset:0;background:rgba(0,0,0,.7);z-index:1000;
+  display:none;align-items:center;justify-content:center;padding:20px;}
+.modal-overlay.show{display:flex;}
+.modal{background:var(--card);border:1px solid var(--border);border-radius:14px;
+  padding:28px;width:100%;max-width:600px;max-height:90vh;overflow-y:auto;}
+.modal h3{font-size:18px;color:var(--gold);margin-bottom:16px;}
+</style>
+</head>
+<body>
+
+<!-- LOGIN -->
+<div id="loginScreen">
+  <div class="login-box">
+    <h2>AYS Admin</h2>
+    <p>Question Bank Manager — Are You Smart?</p>
+    <input type="password" class="pw-input" id="pwInput"
+      placeholder="Enter admin password"
+      onkeydown="if(event.key==='Enter')doLogin()">
+    <button class="login-btn-main" onclick="doLogin()">Enter</button>
+  </div>
+  <div style="font-size:11px;color:var(--sub);">
+    Default password: <strong style="color:var(--gold)">ays2026</strong>
+    — change in source code before deploying
+  </div>
+</div>
+
+<!-- MAIN APP -->
+<div id="mainApp">
+  <div class="topbar">
+    <div class="topbar-brand">AYS<span>?</span> Admin</div>
+    <div class="topbar-right">
+      <span style="font-size:11px;color:var(--sub)" id="loadedFile">No file loaded</span>
+      <button class="tbtn" onclick="document.getElementById('fileInput').click()">📂 Load JSON</button>
+      <input type="file" id="fileInput" accept=".json" style="display:none" onchange="loadFile(event)">
+      <button class="tbtn primary" onclick="downloadJSON()">💾 Download JSON</button>
+      <button class="tbtn" onclick="doLogout()">Logout</button>
+    </div>
+  </div>
+
+  <div class="layout">
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+      <div class="sb-section">Navigation</div>
+      <div class="sb-item active" onclick="showPage('pg-dashboard')">
+        📊 Dashboard
+      </div>
+      <div class="sb-item" onclick="showPage('pg-questions')">
+        📋 All Questions
+        <span class="sb-count" id="sb-total">0</span>
+      </div>
+      <div class="sb-item" onclick="showPage('pg-outdatable')">
+        ⚠️ Needs Review
+        <span class="sb-flag" id="sb-out">0</span>
+      </div>
+      <div class="sb-item" onclick="showPage('pg-add')">
+        ➕ Add Question
+      </div>
+      <div class="sb-item" onclick="showPage('pg-json')">
+        {} JSON Preview
+      </div>
+
+      <div class="sb-section" id="sb-module-section" style="display:none">
+        Filter by Difficulty
+      </div>
+      <div id="sb-filters" style="display:none">
+        <div class="sb-item" onclick="filterDiff('')">All</div>
+        <div class="sb-item" onclick="filterDiff('easy')">🟢 Easy</div>
+        <div class="sb-item" onclick="filterDiff('medium')">🟡 Medium</div>
+        <div class="sb-item" onclick="filterDiff('hard')">🔴 Hard</div>
+      </div>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="content">
+
+      <!-- DASHBOARD -->
+      <div class="page active" id="pg-dashboard">
+        <div class="section-title">Question Bank Dashboard</div>
+        <div class="section-sub">Load a JSON file to begin managing questions</div>
+        <div class="stats-bar">
+          <div class="stat-card">
+            <div class="stat-num" id="st-total">0</div>
+            <div class="stat-lbl">Total Questions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="st-easy">0</div>
+            <div class="stat-lbl">Easy</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="st-med">0</div>
+            <div class="stat-lbl">Medium</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="st-hard">0</div>
+            <div class="stat-lbl">Hard</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="st-out" style="color:var(--orange)">0</div>
+            <div class="stat-lbl">Outdatable</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-num" id="st-due" style="color:var(--red)">0</div>
+            <div class="stat-lbl">Due for Review</div>
+          </div>
+        </div>
+
+        <div style="background:var(--card);border:1px solid var(--border);
+          border-radius:10px;padding:20px;margin-bottom:16px;">
+          <div style="font-weight:700;margin-bottom:12px;color:var(--gold)">
+            📋 How to use this tool
+          </div>
+          <div style="color:var(--sub);font-size:13px;line-height:1.8">
+            1. Click <strong style="color:var(--text)">Load JSON</strong> to open a question file
+            (e.g. <code>ipl.json</code> or <code>worldcup.json</code>)<br>
+            2. View and edit questions in <strong style="color:var(--text)">All Questions</strong><br>
+            3. Add new questions using <strong style="color:var(--text)">Add Question</strong><br>
+            4. Review outdatable questions (those with changing facts) in
+            <strong style="color:var(--text)">Needs Review</strong><br>
+            5. Click <strong style="color:var(--text)">Download JSON</strong> to save the updated file<br>
+            6. Upload the file to your GitHub repo — Cloudflare auto-deploys in 30 seconds
+          </div>
+        </div>
+
+        <div style="background:rgba(255,112,67,.07);border:1px solid rgba(255,112,67,.2);
+          border-radius:10px;padding:16px;">
+          <div style="font-weight:700;color:var(--orange);margin-bottom:8px;">
+            ⚠️ Outdatable Questions
+          </div>
+          <div style="color:var(--sub);font-size:13px;line-height:1.7">
+            Questions marked <code>outdatable: true</code> have answers that may change
+            (e.g. "Most IPL titles"). The <strong style="color:var(--text)">review_after</strong>
+            date tells you when to check. After each IPL season, filter by
+            "Needs Review" and update in bulk.
+          </div>
+        </div>
+      </div>
+
+      <!-- ALL QUESTIONS -->
+      <div class="page" id="pg-questions">
+        <div class="section-title">All Questions</div>
+        <div class="section-sub" id="q-count-sub">Load a file to see questions</div>
+        <div class="search-bar">
+          <input class="search-input" id="searchInput"
+            placeholder="Search questions, options, facts..."
+            oninput="renderTable()">
+          <button class="tbtn" onclick="filterDiff('');renderTable()">All</button>
+          <button class="tbtn" onclick="filterDiff('easy')">Easy</button>
+          <button class="tbtn" onclick="filterDiff('medium')">Medium</button>
+          <button class="tbtn" onclick="filterDiff('hard')">Hard</button>
+        </div>
+        <div style="overflow-x:auto;">
+          <table class="q-table" id="qTable">
+            <thead>
+              <tr>
+                <th>#</th>
+                <th>ID</th>
+                <th>Question</th>
+                <th>Correct Answer</th>
+                <th>Diff</th>
+                <th>Type</th>
+                <th>Outdatable</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="qTableBody">
+              <tr><td colspan="8" style="text-align:center;color:var(--sub);padding:40px">
+                Load a JSON file to view questions
+              </td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- OUTDATABLE QUESTIONS -->
+      <div class="page" id="pg-outdatable">
+        <div class="section-title">Questions Needing Review</div>
+        <div class="section-sub">
+          These questions have answers that may change over time.
+          Review after each major event (IPL, World Cup, etc.)
+        </div>
+        <div id="outdatableList">
+          <div style="text-align:center;color:var(--sub);padding:40px">
+            Load a JSON file to see outdatable questions
+          </div>
+        </div>
+      </div>
+
+      <!-- ADD QUESTION -->
+      <div class="page" id="pg-add">
+        <div class="section-title" id="formTitle">Add New Question</div>
+        <div class="section-sub" id="formSub">Fill all fields carefully. Verify facts before saving.</div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label class="form-label">Question ID *</label>
+            <input class="form-input" id="f-id" placeholder="e.g. ipl-021">
+            <div class="form-hint">Unique ID. Format: module-number (ipl-021, fwc-025)</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Type *</label>
+            <select class="form-select" id="f-type">
+              <option value="mcq">MCQ (Multiple Choice)</option>
+              <option value="guess_player">Guess the Player (Blur Reveal)</option>
+              <option value="true_false">True / False</option>
+            </select>
+          </div>
+          <div class="form-group form-full">
+            <label class="form-label">Question Text *</label>
+            <textarea class="form-textarea" id="f-q"
+              placeholder="Type the question here. For guess_player, start with: WHO AM I?\n\n"></textarea>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Option A *</label>
+            <input class="form-input" id="f-a" placeholder="Option A">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Option B *</label>
+            <input class="form-input" id="f-b" placeholder="Option B">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Option C *</label>
+            <input class="form-input" id="f-c" placeholder="Option C">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Option D *</label>
+            <input class="form-input" id="f-d" placeholder="Option D">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Correct Answer *</label>
+            <select class="form-select" id="f-ans">
+              <option value="0">A</option>
+              <option value="1">B</option>
+              <option value="2">C</option>
+              <option value="3">D</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Difficulty *</label>
+            <select class="form-select" id="f-diff">
+              <option value="easy">Easy</option>
+              <option value="medium" selected>Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+          </div>
+          <div class="form-group form-full">
+            <label class="form-label">Fun Fact * (shown after answer)</label>
+            <textarea class="form-textarea" id="f-fact"
+              placeholder="Interesting verified fact shown after the answer. Verify against official sources."></textarea>
+          </div>
+          <div class="form-group form-full">
+            <label class="form-label">Hook (optional) — shown before question</label>
+            <input class="form-input" id="f-hook"
+              placeholder='e.g. "💀 This one destroys casual fans!" or "🏆 Real experts know this!"'>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Outdatable?</label>
+            <select class="form-select" id="f-outdatable">
+              <option value="false">No — answer is permanent</option>
+              <option value="true">Yes — answer may change</option>
+            </select>
+            <div class="form-hint">Mark Yes for records, current title holders, etc.</div>
+          </div>
+          <div class="form-group" id="reviewGroup" style="display:none">
+            <label class="form-label">Review After Date</label>
+            <input class="form-input" type="date" id="f-review">
+            <div class="form-hint">Set to after the next relevant event (IPL final, World Cup, etc.)</div>
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pause after Question (ms)</label>
+            <input class="form-input" type="number" id="f-pauseQ" value="900"
+              placeholder="900">
+          </div>
+          <div class="form-group">
+            <label class="form-label">Pause between Options (ms)</label>
+            <input class="form-input" type="number" id="f-pauseO" value="550"
+              placeholder="550">
+          </div>
+        </div>
+
+        <div>
+          <button class="form-submit" onclick="saveQuestion()" id="saveBtn">
+            ➕ Add Question
+          </button>
+          <button class="form-cancel" onclick="cancelEdit()">Cancel</button>
+        </div>
+
+        <div style="margin-top:24px;background:rgba(0,230,118,.06);
+          border:1px solid rgba(0,230,118,.2);border-radius:10px;padding:16px;
+          font-size:12px;color:var(--sub);line-height:1.7">
+          <strong style="color:var(--green)">✓ Before adding:</strong><br>
+          • Verify the correct answer against official sources (IPL website, ESPNcricinfo, FIFA.com)<br>
+          • Check the fun fact is accurate — viewers will Google it<br>
+          • If the answer could change in future, mark Outdatable = Yes
+        </div>
+      </div>
+
+      <!-- JSON PREVIEW -->
+      <div class="page" id="pg-json">
+        <div class="section-title">JSON Preview</div>
+        <div class="section-sub">
+          This is the current state of your question file.
+          Download and upload to GitHub to deploy.
+        </div>
+        <div style="display:flex;gap:10px;margin-bottom:16px;">
+          <button class="tbtn primary" onclick="downloadJSON()">💾 Download JSON</button>
+          <button class="tbtn" onclick="copyJSON()">📋 Copy to Clipboard</button>
+        </div>
+        <div class="json-preview" id="jsonPreview">Load a JSON file to preview</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- EDIT MODAL -->
+<div class="modal-overlay" id="editModal">
+  <div class="modal">
+    <h3>Edit Question</h3>
+    <div id="editFormContainer"></div>
+    <div style="display:flex;gap:10px;margin-top:16px;">
+      <button class="form-submit" onclick="saveEditModal()">💾 Save Changes</button>
+      <button class="form-cancel" onclick="closeModal()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+<script>
+'use strict';
+const ADMIN_PASSWORD = 'ays2026'; // Change this before deploying
+
+let currentData = null;
+let currentFile = null;
+let editingIdx  = null;
+let diffFilter  = '';
+
+// ── LOGIN ──────────────────────────────────────────────────────
+function doLogin() {
+  const pw = document.getElementById('pwInput').value;
+  if (pw === ADMIN_PASSWORD) {
+    document.getElementById('loginScreen').style.display = 'none';
+    document.getElementById('mainApp').style.display = 'block';
+  } else {
+    alert('Incorrect password');
+  }
+}
+function doLogout() {
+  document.getElementById('loginScreen').style.display = 'flex';
+  document.getElementById('mainApp').style.display = 'none';
+  document.getElementById('pwInput').value = '';
+}
+
+// ── FILE LOAD ──────────────────────────────────────────────────
+function loadFile(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  currentFile = file.name;
+  document.getElementById('loadedFile').textContent = file.name;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      currentData = JSON.parse(e.target.result);
+      refreshAll();
+      showPage('pg-dashboard');
+    } catch(err) {
+      alert('Invalid JSON file: ' + err.message);
+    }
+  };
+  reader.readAsText(file);
+}
+
+function refreshAll() {
+  if (!currentData) return;
+  updateStats();
+  renderTable();
+  renderOutdatable();
+  updateNextId();
+  document.getElementById('jsonPreview').textContent =
+    JSON.stringify(currentData, null, 2);
+  // Show filter options
+  document.getElementById('sb-module-section').style.display = 'block';
+  document.getElementById('sb-filters').style.display = 'block';
+}
+
+function updateStats() {
+  const qs = currentData.questions || [];
+  const easy  = qs.filter(q => q.difficulty === 'easy').length;
+  const med   = qs.filter(q => q.difficulty === 'medium').length;
+  const hard  = qs.filter(q => q.difficulty === 'hard').length;
+  const out   = qs.filter(q => q.outdatable).length;
+  const today = new Date().toISOString().split('T')[0];
+  const due   = qs.filter(q => q.outdatable && q.review_after && q.review_after <= today).length;
+
+  document.getElementById('st-total').textContent = qs.length;
+  document.getElementById('st-easy').textContent  = easy;
+  document.getElementById('st-med').textContent   = med;
+  document.getElementById('st-hard').textContent  = hard;
+  document.getElementById('st-out').textContent   = out;
+  document.getElementById('st-due').textContent   = due;
+  document.getElementById('sb-total').textContent = qs.length;
+  document.getElementById('sb-out').textContent   = due;
+  document.getElementById('q-count-sub').textContent =
+    `${qs.length} questions loaded from ${currentFile || 'file'}`;
+}
+
+function renderTable() {
+  if (!currentData) return;
+  const search = (document.getElementById('searchInput').value || '').toLowerCase();
+  const qs = (currentData.questions || []).filter(q => {
+    const matchDiff = !diffFilter || q.difficulty === diffFilter;
+    const matchSearch = !search ||
+      q.q.toLowerCase().includes(search) ||
+      (q.fact||'').toLowerCase().includes(search) ||
+      q.opts.some(o => o.toLowerCase().includes(search));
+    return matchDiff && matchSearch;
+  });
+
+  const today = new Date().toISOString().split('T')[0];
+  const tbody = document.getElementById('qTableBody');
+  if (qs.length === 0) {
+    tbody.innerHTML = '<tr><td colspan="8" style="text-align:center;color:var(--sub);padding:30px">No questions match filter</td></tr>';
+    return;
+  }
+
+  tbody.innerHTML = qs.map((q, i) => {
+    const isDue = q.outdatable && q.review_after && q.review_after <= today;
+    const rowClass = isDue ? 'outdatable-due' : q.outdatable ? 'outdatable' : '';
+    const diffBadge = { easy:'badge-easy', medium:'badge-med', hard:'badge-hard' }[q.difficulty] || 'badge-med';
+    const realIdx = currentData.questions.indexOf(q);
+
+    return `<tr class="${rowClass}">
+      <td style="color:var(--sub)">${i+1}</td>
+      <td><code style="font-size:11px;color:var(--cyan)">${q.id}</code></td>
+      <td class="q-text-cell" title="${q.q.replace(/"/g,'&quot;')}">${q.q}</td>
+      <td class="correct-opt">${q.opts[q.ans]}</td>
+      <td><span class="badge ${diffBadge}">${q.difficulty}</span></td>
+      <td style="font-size:11px;color:var(--sub)">${q.type||'mcq'}</td>
+      <td>${q.outdatable
+        ? `<span class="badge ${isDue?'badge-due':'badge-out'}">${isDue?'DUE':'YES'}</span>`
+        : '<span style="color:var(--sub);font-size:11px">—</span>'}</td>
+      <td><div class="action-btns">
+        <button class="abtn" onclick="editQuestion(${realIdx})">✏️ Edit</button>
+        <button class="abtn del" onclick="deleteQuestion(${realIdx})">🗑️</button>
+      </div></td>
+    </tr>`;
+  }).join('');
+}
+
+function filterDiff(d) { diffFilter = d; renderTable(); }
+
+function renderOutdatable() {
+  if (!currentData) return;
+  const today = new Date().toISOString().split('T')[0];
+  const qs = (currentData.questions || []).filter(q => q.outdatable);
+  const el = document.getElementById('outdatableList');
+
+  if (qs.length === 0) {
+    el.innerHTML = '<div style="text-align:center;color:var(--sub);padding:40px">No outdatable questions in this file</div>';
+    return;
+  }
+
+  el.innerHTML = qs.map((q, i) => {
+    const isDue = q.review_after && q.review_after <= today;
+    const realIdx = currentData.questions.indexOf(q);
+    return `<div class="out-card ${isDue ? 'due' : ''}">
+      <div class="out-card-top">
+        <div>
+          <div class="out-q">${q.q}</div>
+          <div class="out-meta">
+            ID: <code>${q.id}</code> &nbsp;|&nbsp;
+            Correct: <strong style="color:var(--green)">${q.opts[q.ans]}</strong> &nbsp;|&nbsp;
+            Difficulty: ${q.difficulty}
+          </div>
+          ${q.review_after ? `<div class="${isDue?'out-due':'out-meta'}">
+            Review after: ${q.review_after} ${isDue ? '⚠️ OVERDUE' : ''}
+          </div>` : ''}
+        </div>
+        <button class="abtn" onclick="editQuestion(${realIdx})">✏️ Update</button>
+      </div>
+      <div style="font-size:12px;color:var(--sub);font-style:italic">${q.fact}</div>
+    </div>`;
+  }).join('');
+}
+
+// ── ADD QUESTION ───────────────────────────────────────────────
+function updateNextId() {
+  if (!currentData) return;
+  const mod = currentData.module;
+  const qs  = currentData.questions || [];
+  const prefix = mod ? mod.id.split('-').pop().slice(0,3) : 'q';
+  const nums = qs.map(q => parseInt((q.id||'').split('-').pop())).filter(n => !isNaN(n));
+  const next = nums.length > 0 ? Math.max(...nums) + 1 : 1;
+  document.getElementById('f-id').value = `${prefix}-${String(next).padStart(3,'0')}`;
+}
+
+document.getElementById('f-outdatable').addEventListener('change', function() {
+  document.getElementById('reviewGroup').style.display =
+    this.value === 'true' ? 'block' : 'none';
+});
+
+function saveQuestion() {
+  if (!currentData) { alert('Load a JSON file first'); return; }
+  const q = buildQuestionFromForm();
+  if (!q) return;
+  currentData.questions.push(q);
+  currentData.module.total_questions = currentData.questions.length;
+  currentData.module.last_updated = new Date().toISOString().split('T')[0];
+  refreshAll();
+  showPage('pg-questions');
+  showToastAdmin(`✅ Question ${q.id} added! ${currentData.questions.length} total.`);
+  resetForm();
+}
+
+function buildQuestionFromForm(prefix='f-') {
+  const id   = document.getElementById(`${prefix}id`)?.value?.trim();
+  const q    = document.getElementById(`${prefix}q`)?.value?.trim();
+  const a    = document.getElementById(`${prefix}a`)?.value?.trim();
+  const b    = document.getElementById(`${prefix}b`)?.value?.trim();
+  const c    = document.getElementById(`${prefix}c`)?.value?.trim();
+  const d    = document.getElementById(`${prefix}d`)?.value?.trim();
+  const ans  = parseInt(document.getElementById(`${prefix}ans`)?.value);
+  const diff = document.getElementById(`${prefix}diff`)?.value;
+  const fact = document.getElementById(`${prefix}fact`)?.value?.trim();
+  const hook = document.getElementById(`${prefix}hook`)?.value?.trim();
+  const out  = document.getElementById(`${prefix}outdatable`)?.value === 'true';
+  const rev  = document.getElementById(`${prefix}review`)?.value;
+  const pq   = parseInt(document.getElementById(`${prefix}pauseQ`)?.value) || 900;
+  const po   = parseInt(document.getElementById(`${prefix}pauseO`)?.value) || 550;
+  const type = document.getElementById(`${prefix}type`)?.value || 'mcq';
+
+  if (!id||!q||!a||!b||!c||!d||!fact) {
+    alert('Please fill all required fields (marked *)');
+    return null;
+  }
+  // Check duplicate ID
+  if (prefix === 'f-' && currentData.questions.some(x => x.id === id)) {
+    alert(`ID "${id}" already exists. Use a unique ID.`);
+    return null;
+  }
+
+  const obj = {
+    id, type, difficulty: diff,
+    q, opts: [a,b,c,d], ans,
+    fact, outdatable: out,
+    vs: { pauseAfterQ: pq, pauseBetweenOpts: po }
+  };
+  if (hook) obj.hook = hook;
+  if (out && rev) obj.review_after = rev;
+  return obj;
+}
+
+function resetForm() {
+  ['f-id','f-q','f-a','f-b','f-c','f-d','f-fact','f-hook','f-review'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+  document.getElementById('f-ans').value = '0';
+  document.getElementById('f-diff').value = 'medium';
+  document.getElementById('f-outdatable').value = 'false';
+  document.getElementById('reviewGroup').style.display = 'none';
+  document.getElementById('f-pauseQ').value = '900';
+  document.getElementById('f-pauseO').value = '550';
+  document.getElementById('formTitle').textContent = 'Add New Question';
+  document.getElementById('saveBtn').textContent = '➕ Add Question';
+  editingIdx = null;
+  updateNextId();
+}
+
+function cancelEdit() { resetForm(); }
+
+// ── EDIT / DELETE ──────────────────────────────────────────────
+function editQuestion(idx) {
+  const q = currentData.questions[idx];
+  // Build edit form in modal
+  const html = `
+    <div class="form-grid" style="grid-template-columns:1fr 1fr">
+      <div class="form-group"><label class="form-label">ID</label>
+        <input class="form-input" id="e-id" value="${q.id}" readonly style="opacity:.6"></div>
+      <div class="form-group"><label class="form-label">Type</label>
+        <select class="form-select" id="e-type">
+          <option value="mcq" ${q.type==='mcq'?'selected':''}>MCQ</option>
+          <option value="guess_player" ${q.type==='guess_player'?'selected':''}>Guess Player</option>
+        </select></div>
+      <div class="form-group" style="grid-column:1/-1">
+        <label class="form-label">Question</label>
+        <textarea class="form-textarea" id="e-q">${q.q}</textarea></div>
+      <div class="form-group"><label class="form-label">Option A</label>
+        <input class="form-input" id="e-a" value="${q.opts[0]}"></div>
+      <div class="form-group"><label class="form-label">Option B</label>
+        <input class="form-input" id="e-b" value="${q.opts[1]}"></div>
+      <div class="form-group"><label class="form-label">Option C</label>
+        <input class="form-input" id="e-c" value="${q.opts[2]}"></div>
+      <div class="form-group"><label class="form-label">Option D</label>
+        <input class="form-input" id="e-d" value="${q.opts[3]}"></div>
+      <div class="form-group"><label class="form-label">Correct Answer</label>
+        <select class="form-select" id="e-ans">
+          <option value="0" ${q.ans===0?'selected':''}>A — ${q.opts[0]}</option>
+          <option value="1" ${q.ans===1?'selected':''}>B — ${q.opts[1]}</option>
+          <option value="2" ${q.ans===2?'selected':''}>C — ${q.opts[2]}</option>
+          <option value="3" ${q.ans===3?'selected':''}>D — ${q.opts[3]}</option>
+        </select></div>
+      <div class="form-group"><label class="form-label">Difficulty</label>
+        <select class="form-select" id="e-diff">
+          <option value="easy" ${q.difficulty==='easy'?'selected':''}>Easy</option>
+          <option value="medium" ${q.difficulty==='medium'?'selected':''}>Medium</option>
+          <option value="hard" ${q.difficulty==='hard'?'selected':''}>Hard</option>
+        </select></div>
+      <div class="form-group" style="grid-column:1/-1">
+        <label class="form-label">Fun Fact</label>
+        <textarea class="form-textarea" id="e-fact">${q.fact}</textarea></div>
+      <div class="form-group" style="grid-column:1/-1">
+        <label class="form-label">Hook (optional)</label>
+        <input class="form-input" id="e-hook" value="${q.hook||''}"></div>
+      <div class="form-group"><label class="form-label">Outdatable?</label>
+        <select class="form-select" id="e-outdatable" onchange="toggleReviewDate(this,'e-review-grp')">
+          <option value="false" ${!q.outdatable?'selected':''}>No</option>
+          <option value="true" ${q.outdatable?'selected':''}>Yes</option>
+        </select></div>
+      <div class="form-group" id="e-review-grp" style="${q.outdatable?'':'display:none'}">
+        <label class="form-label">Review After</label>
+        <input class="form-input" type="date" id="e-review" value="${q.review_after||''}"></div>
+      <div class="form-group"><label class="form-label">Pause after Q (ms)</label>
+        <input class="form-input" type="number" id="e-pauseQ" value="${(q.vs&&q.vs.pauseAfterQ)||900}"></div>
+      <div class="form-group"><label class="form-label">Pause between Opts (ms)</label>
+        <input class="form-input" type="number" id="e-pauseO" value="${(q.vs&&q.vs.pauseBetweenOpts)||550}"></div>
+    </div>`;
+
+  document.getElementById('editFormContainer').innerHTML = html;
+  editingIdx = idx;
+  document.getElementById('editModal').classList.add('show');
+}
+
+function toggleReviewDate(sel, groupId) {
+  document.getElementById(groupId).style.display = sel.value === 'true' ? 'block' : 'none';
+}
+
+function saveEditModal() {
+  if (editingIdx === null) return;
+  const q = currentData.questions[editingIdx];
+  q.type       = document.getElementById('e-type').value;
+  q.q          = document.getElementById('e-q').value.trim();
+  q.opts[0]    = document.getElementById('e-a').value.trim();
+  q.opts[1]    = document.getElementById('e-b').value.trim();
+  q.opts[2]    = document.getElementById('e-c').value.trim();
+  q.opts[3]    = document.getElementById('e-d').value.trim();
+  q.ans        = parseInt(document.getElementById('e-ans').value);
+  q.difficulty = document.getElementById('e-diff').value;
+  q.fact       = document.getElementById('e-fact').value.trim();
+  q.hook       = document.getElementById('e-hook').value.trim() || undefined;
+  q.outdatable = document.getElementById('e-outdatable').value === 'true';
+  q.review_after = document.getElementById('e-review')?.value || undefined;
+  q.vs = {
+    pauseAfterQ: parseInt(document.getElementById('e-pauseQ').value)||900,
+    pauseBetweenOpts: parseInt(document.getElementById('e-pauseO').value)||550
+  };
+  currentData.module.last_updated = new Date().toISOString().split('T')[0];
+  refreshAll();
+  closeModal();
+  showToastAdmin('✅ Question updated!');
+}
+
+function closeModal() {
+  document.getElementById('editModal').classList.remove('show');
+  editingIdx = null;
+}
+
+function deleteQuestion(idx) {
+  const q = currentData.questions[idx];
+  if (!confirm(`Delete question: "${q.q.substring(0,60)}..."?\n\nThis cannot be undone.`)) return;
+  currentData.questions.splice(idx, 1);
+  currentData.module.total_questions = currentData.questions.length;
+  currentData.module.last_updated = new Date().toISOString().split('T')[0];
+  refreshAll();
+  showToastAdmin('🗑️ Question deleted');
+}
+
+// ── DOWNLOAD / COPY ────────────────────────────────────────────
+function downloadJSON() {
+  if (!currentData) { alert('Load a JSON file first'); return; }
+  const blob = new Blob([JSON.stringify(currentData, null, 2)], {type:'application/json'});
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = currentFile || 'questions.json';
+  a.click();
+  showToastAdmin('💾 Downloaded! Upload to GitHub to deploy.');
+}
+
+function copyJSON() {
+  if (!currentData) return;
+  navigator.clipboard?.writeText(JSON.stringify(currentData, null, 2))
+    .then(() => showToastAdmin('📋 Copied to clipboard!'))
+    .catch(() => showToastAdmin('❌ Copy failed — use Download instead'));
+}
+
+// ── NAVIGATION ─────────────────────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.sb-item').forEach(i => i.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+  const map = {
+    'pg-dashboard':'Dashboard','pg-questions':'All Questions',
+    'pg-outdatable':'Needs Review','pg-add':'Add Question','pg-json':'JSON Preview'
+  };
+  document.querySelectorAll('.sb-item').forEach(item => {
+    if(item.textContent.trim().includes(map[id]||'_')) item.classList.add('active');
+  });
+}
+
+// ── TOAST ──────────────────────────────────────────────────────
+function showToastAdmin(msg) {
+  const t = document.createElement('div');
+  t.style.cssText = 'position:fixed;bottom:24px;left:50%;transform:translateX(-50%);'+
+    'background:#13151f;border:1px solid #1e2133;border-radius:10px;'+
+    'padding:12px 20px;font-size:13px;color:#f0f0f5;z-index:10000;'+
+    'white-space:nowrap;animation:fadeIn .3s ease;';
+  t.textContent = msg;
+  document.body.appendChild(t);
+  setTimeout(() => t.remove(), 3000);
+}
+
+// Click outside modal to close
+document.getElementById('editModal').addEventListener('click', function(e) {
+  if(e.target === this) closeModal();
+});
+</script>
+</body>
+</html>
