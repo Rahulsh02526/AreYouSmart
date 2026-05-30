@@ -1,0 +1,402 @@
+{
+  "module": {
+    "id": "sports-football-worldcup",
+    "name": "FIFA World Cup",
+    "category": "sports",
+    "subcategory": "football",
+    "icon": "🌍",
+    "difficulty": "easy",
+    "version": "1.0",
+    "last_updated": "2026-05-30",
+    "total_questions": 20,
+    "questions_per_game": 20
+  },
+  "questions": [
+    {
+      "id": "fwc-001",
+      "type": "mcq",
+      "difficulty": "easy",
+      "hook": "🔥 Only 40% get this right!",
+      "q": "How many teams will participate in the FIFA World Cup from 2026 onwards?",
+      "opts": [
+        "32",
+        "36",
+        "48",
+        "64"
+      ],
+      "ans": 2,
+      "fact": "FIFA expanded to 48 teams for 2026, co-hosted by USA, Canada and Mexico.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "fwc-002",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which country has won the most FIFA World Cup titles?",
+      "opts": [
+        "Germany",
+        "Argentina",
+        "Brazil",
+        "Italy"
+      ],
+      "ans": 2,
+      "fact": "Brazil has won 5 times — 1958, 1962, 1970, 1994, and 2002.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-003",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "In which year was the very first FIFA World Cup held?",
+      "opts": [
+        "1924",
+        "1928",
+        "1930",
+        "1934"
+      ],
+      "ans": 2,
+      "fact": "The inaugural World Cup was held in Uruguay in 1930.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-004",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which country hosted the 2022 FIFA World Cup?",
+      "opts": [
+        "UAE",
+        "Saudi Arabia",
+        "Qatar",
+        "Bahrain"
+      ],
+      "ans": 2,
+      "fact": "Qatar 2022 was the first World Cup held in the Middle East.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-005",
+      "type": "mcq",
+      "difficulty": "easy",
+      "hook": "⭐ Real fans know this instantly!",
+      "q": "Who won the Golden Ball award at the 2022 World Cup?",
+      "opts": [
+        "Kylian Mbappé",
+        "Luka Modrić",
+        "Lionel Messi",
+        "Neymar"
+      ],
+      "ans": 2,
+      "fact": "Messi won his first World Cup and the Golden Ball in Qatar 2022.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "fwc-006",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which goalkeeper won the Golden Glove at the 2022 World Cup?",
+      "opts": [
+        "Alisson",
+        "Thibaut Courtois",
+        "Dominik Livaković",
+        "Emiliano Martínez"
+      ],
+      "ans": 3,
+      "fact": "Martínez saved crucial penalties in the semi-final and the final shootout.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 600
+      }
+    },
+    {
+      "id": "fwc-007",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Who is the all-time top scorer in FIFA World Cup history?",
+      "opts": [
+        "Ronaldo",
+        "Just Fontaine",
+        "Miroslav Klose",
+        "Gerd Müller"
+      ],
+      "ans": 2,
+      "fact": "Miroslav Klose scored 16 World Cup goals across 4 tournaments for Germany.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "fwc-008",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which team finished as runners-up at the 2022 World Cup?",
+      "opts": [
+        "Morocco",
+        "Croatia",
+        "Brazil",
+        "France"
+      ],
+      "ans": 3,
+      "fact": "France lost on penalties to Argentina — Mbappé scored a hat-trick in that final.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-009",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "💀 This one destroys casual fans!",
+      "q": "Which nation was the first African team to reach a World Cup semi-final in 2022?",
+      "opts": [
+        "Senegal",
+        "Ghana",
+        "Nigeria",
+        "Morocco"
+      ],
+      "ans": 3,
+      "fact": "Morocco beat Portugal to become the first African side in a World Cup semi-final.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 1000,
+        "pauseBetweenOpts": 600
+      }
+    },
+    {
+      "id": "fwc-010",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Who won the Golden Boot at the 2022 World Cup?",
+      "opts": [
+        "Lionel Messi",
+        "Kylian Mbappé",
+        "Olivier Giroud",
+        "Álvaro Morata"
+      ],
+      "ans": 1,
+      "fact": "Mbappé scored 8 goals including a hat-trick in the final.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "fwc-011",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "How many goals did Mbappé score in the 2022 World Cup final?",
+      "opts": [
+        "1",
+        "2",
+        "3",
+        "4"
+      ],
+      "ans": 2,
+      "fact": "Mbappé's hat-trick was only the second ever in a World Cup final.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 450
+      }
+    },
+    {
+      "id": "fwc-012",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which country has reached 3 World Cup finals but never won?",
+      "opts": [
+        "Spain",
+        "Netherlands",
+        "England",
+        "Portugal"
+      ],
+      "ans": 1,
+      "fact": "The Netherlands reached the final in 1974, 1978 and 2010 — losing all three.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "fwc-013",
+      "type": "mcq",
+      "difficulty": "easy",
+      "hook": "🌍 Most people guess wrong here!",
+      "q": "Where will the 2026 FIFA World Cup be hosted?",
+      "opts": [
+        "Spain, Portugal, Morocco",
+        "USA, Canada, Mexico",
+        "Australia, New Zealand, Japan",
+        "England, France, Germany"
+      ],
+      "ans": 1,
+      "fact": "2026 will be the first World Cup hosted by three nations.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 700
+      }
+    },
+    {
+      "id": "fwc-014",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Who scored the famous Hand of God goal?",
+      "opts": [
+        "Pelé",
+        "Diego Maradona",
+        "Ronaldo",
+        "Zinedine Zidane"
+      ],
+      "ans": 1,
+      "fact": "Maradona's handball against England in 1986 is football's most controversial moment.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-015",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team knocked out Brazil in the 2022 World Cup quarter-finals?",
+      "opts": [
+        "France",
+        "Argentina",
+        "Croatia",
+        "Morocco"
+      ],
+      "ans": 2,
+      "fact": "Croatia eliminated Brazil on penalties after a 1-1 draw in normal and extra time.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "fwc-016",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "In which year did Spain win their first FIFA World Cup?",
+      "opts": [
+        "2006",
+        "2010",
+        "2014",
+        "2018"
+      ],
+      "ans": 1,
+      "fact": "Spain beat Netherlands 1-0 in South Africa 2010. Iniesta scored the winner in extra time.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-017",
+      "type": "mcq",
+      "difficulty": "easy",
+      "q": "Which nation hosted the 2018 FIFA World Cup?",
+      "opts": [
+        "Brazil",
+        "Germany",
+        "Russia",
+        "France"
+      ],
+      "ans": 2,
+      "fact": "Russia hosted 2018. France beat Croatia 4-2 in the final in Moscow.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 800,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-018",
+      "type": "mcq",
+      "difficulty": "easy",
+      "hook": "⚡ Speed round — think fast!",
+      "q": "Who was the top scorer of the 2018 FIFA World Cup?",
+      "opts": [
+        "Romelu Lukaku",
+        "Antoine Griezmann",
+        "Harry Kane",
+        "Cristiano Ronaldo"
+      ],
+      "ans": 2,
+      "fact": "Harry Kane won the 2018 Golden Boot with 6 goals including two hat-tricks.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    },
+    {
+      "id": "fwc-019",
+      "type": "mcq",
+      "difficulty": "medium",
+      "q": "Which team was beaten 7-1 by Germany at the 2014 World Cup?",
+      "opts": [
+        "Argentina",
+        "Portugal",
+        "Brazil",
+        "Spain"
+      ],
+      "ans": 2,
+      "fact": "Germany's 7-1 demolition of Brazil in the semi-final is called the Mineirazo.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 500
+      }
+    },
+    {
+      "id": "fwc-020",
+      "type": "mcq",
+      "difficulty": "medium",
+      "hook": "🏆 Final question — make it count!",
+      "q": "Who scored the Goal of the Century at the 1986 World Cup?",
+      "opts": [
+        "Pelé",
+        "Ronaldo",
+        "Diego Maradona",
+        "Zinedine Zidane"
+      ],
+      "ans": 2,
+      "fact": "Maradona dribbled past 5 England players — voted the greatest World Cup goal ever.",
+      "outdatable": false,
+      "vs": {
+        "pauseAfterQ": 900,
+        "pauseBetweenOpts": 550
+      }
+    }
+  ]
+}
