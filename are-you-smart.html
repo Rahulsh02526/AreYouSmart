@@ -754,7 +754,7 @@ function goPg(id) {
   document.getElementById(id).classList.add('active');
   window.scrollTo(0, 0);
   if (['pg-landing','pg-subcat','pg-modules'].includes(id)) {
-    fadeBgOut(1.0);
+    try { fadeBgOut(1.0); } catch(e) {}
   }
 }
 
