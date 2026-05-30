@@ -1,0 +1,32 @@
+<svg width="1200" height="525" viewBox="0 0 1200 525" xmlns="http://www.w3.org/2000/svg">
+<defs><style>
+  .wm  { font-family: 'Playfair Display', Georgia, serif; font-weight: 900; }
+  .tag { font-family: 'DM Sans', Arial, sans-serif; font-weight: 700; }
+</style></defs>
+<rect width="1200" height="525" rx="28" fill="#08101e"/>
+<rect width="1200" height="525" rx="28" fill="none" stroke="#c8900a" stroke-width="3"/>
+<g opacity="0.14">
+  <circle cx="108" cy="158" r="3.5" fill="#f5c842"/><circle cx="136" cy="132" r="2.5" fill="#f5c842"/>
+  <circle cx="84"  cy="190" r="2.5" fill="#f5c842"/><circle cx="62"  cy="158" r="2"   fill="#f5c842"/>
+  <circle cx="98"  cy="218" r="2"   fill="#f5c842"/><circle cx="130" cy="242" r="2.5" fill="#f5c842"/>
+  <circle cx="66"  cy="248" r="2"   fill="#f5c842"/><circle cx="42"  cy="212" r="2.5" fill="#f5c842"/>
+  <circle cx="78"  cy="122" r="2"   fill="#f5c842"/><circle cx="154" cy="268" r="2"   fill="#f5c842"/>
+  <circle cx="1092" cy="158" r="3.5" fill="#f5c842"/><circle cx="1064" cy="132" r="2.5" fill="#f5c842"/>
+  <circle cx="1116" cy="190" r="2.5" fill="#f5c842"/><circle cx="1138" cy="158" r="2"   fill="#f5c842"/>
+  <circle cx="1102" cy="218" r="2"   fill="#f5c842"/><circle cx="1070" cy="242" r="2.5" fill="#f5c842"/>
+  <circle cx="1134" cy="248" r="2"   fill="#f5c842"/><circle cx="1158" cy="212" r="2.5" fill="#f5c842"/>
+  <circle cx="1122" cy="122" r="2"   fill="#f5c842"/><circle cx="1046" cy="268" r="2"   fill="#f5c842"/>
+</g>
+<circle cx="228" cy="255" r="182" fill="#08101e" stroke="#c8900a" stroke-width="5"/>
+<circle cx="228" cy="255" r="160" fill="none" stroke="#e8a820" stroke-width="2" opacity="0.35"/>
+<circle cx="228" cy="255" r="142" fill="#0d1a2e"/>
+<circle cx="228" cy="255" r="142" fill="none" stroke="#f5c842" stroke-width="1" opacity="0.22"/>
+<text x="228" y="336" text-anchor="middle" class="wm" font-size="192" fill="#e8a820">?</text>
+<line x1="446" y1="96" x2="446" y2="428" stroke="#c8900a" stroke-width="2" opacity="0.5"/>
+<text x="823" y="202" text-anchor="middle" class="wm" font-size="100" fill="#ffffff">Are You</text>
+<text x="823" y="322" text-anchor="middle" class="wm" font-size="100" fill="#e8a820">Smart</text>
+<line x1="520" y1="366" x2="660" y2="366" stroke="#c8900a" stroke-width="1.5"/>
+<text x="823" y="374" text-anchor="middle" class="tag" font-size="20" fill="#c8900a" letter-spacing="6">TEST YOUR BRAIN DAILY</text>
+<line x1="986" y1="366" x2="1126" y2="366" stroke="#c8900a" stroke-width="1.5"/>
+<text x="1150" y="500" text-anchor="end" class="tag" font-size="12" fill="#2a3a4a" letter-spacing="2">PRIMARY LOGO — ARE YOU SMART?  v3</text>
+</svg>
