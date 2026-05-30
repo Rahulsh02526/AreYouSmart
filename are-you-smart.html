@@ -735,7 +735,8 @@ function buildLanding() {
       : 'Coming soon';
 
     return `<div class="cat-card ${isLive ? 'live' : 'locked'}"
-      onclick="${isLive ? `goSubcat('${cat.id}')` : `showToast('${cat.name} coming soon! 🔜')`}">
+      data-catid="${cat.id}" data-live="${isLive}"
+      onclick="handleCatClick(this)">
       <span class="ce">${cat.icon}</span>
       <div class="cn">${cat.name}</div>
       <div class="cc">${countTxt}</div>
@@ -758,9 +759,21 @@ function goPg(id) {
   }
 }
 
+function handleCatClick(el) {
+  const catId = el.dataset.catid;
+  const isLive = el.dataset.live === 'true';
+  if (isLive) {
+    goSubcat(catId);
+  } else {
+    const cat = platformIndex?.categories?.find(c => c.id === catId);
+    showToast((cat?.name || 'This category') + ' coming soon! 🔜');
+  }
+}
+
 function goSubcat(catId) {
+  if (!platformIndex) { showToast('Loading... please wait and try again!'); return; }
   const cat = platformIndex.categories.find(c => c.id === catId);
-  if (!cat) return;
+  if (!cat) { showToast('Category not found!'); return; }
   navStack = [{ type:'cat', id:catId, name:cat.name }];
 
   document.getElementById('subcatTitle').textContent = `${cat.icon} ${cat.name}`;
